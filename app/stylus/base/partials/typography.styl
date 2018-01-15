@@ -1,0 +1,113 @@
+@import '../../utilities/vars'
+@import '../../utilities/mixins'
+
+h1
+  font(3.875rem, $black, 600, normal)
+  letter-spacing: 3px;
+  margin-bottom 2.5rem
+  position relative
+  z-index 20
+  +portrait()
+    font-size 3.750rem
+  +mobile()
+    font-size 2.250rem
+    letter-spacing 1px
+
+
+h2
+  font(4.375rem, $black, 600, normal)
+  letter-spacing: 3px;
+  color: $pink
+  margin-bottom 53px
+  +tablet()
+    font-size 3.750rem
+  +mobile()
+    font-size 2rem
+    letter-spacing 1px
+    word-wrap break-word
+
+
+h2.h2-small
+  font-size: 3.125rem
+  letter-spacing: 2.1px;
+  max-width 291px
+  +mobile()
+    font-size 2rem
+    letter-spacing 1px
+    word-wrap break-word
+
+h3
+  font(2.5rem, $black, 600, normal)
+  margin-bottom 3.188rem
+  letter-spacing: 2.4px;
+  +mobile()
+    word-wrap break-word
+    font-size 1.875rem
+    letter-spacing 1px
+
+h3.h3-big
+  font-size: 3.125rem
+  margin-bottom: 68px;
+  +mobile()
+    font-size 1.875rem
+    letter-spacing 1px
+
+h3.h3-small
+  font-size: 30px;
+  letter-spacing: 1.3px;
+  +mobile()
+    font-size 1.875rem
+    letter-spacing 1px
+
+h4
+  font(2.125rem, $pink, 600, normal)
+  margin-bottom 66px
+  text-align center
+  letter-spacing: 1.5px;
+
+p
+  font(1rem, $black, 300, 1.5)
+  margin-bottom 6.688rem
+  +mobile()
+    margin-bottom: 3.188rem;
+
+hr
+  border: 0;
+  height: 1px;
+  background: $black
+  margin 1em 0
+
+.black
+  color $black
+
+.white
+  color $white
+
+.gray
+  color $gray
+
+.white-big
+  color $white
+  line-height: 1.75;
+  font-weight 500
+  margin-top 9px
+  margin-bottom 56px
+
+.white-bold
+  color $white
+  font-weight: 600
+  line-height: 1.75;
+
+.purple-bold
+  color $purple !important
+  font-size: $s18
+  font-weight: 600
+  line-height: 1.56;
+
+.pink-bold
+  font-size: $s18
+  font-weight: 600
+  line-height: 1.56;
+  color $pink !important
+
+

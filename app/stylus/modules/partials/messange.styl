@@ -1,0 +1,152 @@
+.messenge
+  background $white
+  position absolute
+  top 27px
+  left 39px
+  right 82px
+  bottom 27px
+  border-radius 24px
+  padding: 33px 16px 40px 58px;
+  +tablet()
+    left: 31px;
+    top 19px
+    right 66px
+  +portrait()
+    top: 11px;
+    left: 22px;
+    right: 42px;
+    bottom: 13px;
+    padding 16px
+
+  +mobile()
+    position relative
+    top 0
+    left 0
+    bottom 0
+    right 0
+    padding 10px
+    min-height 570px
+
+
+  &-header
+    background rgba(9,0,198,.04)
+    color #0900c6
+    border-radius: 21px;
+    font-size: $s30
+    font-weight: 600;
+    text-align center
+    padding-top 18px
+    padding-bottom 16px
+    margin-bottom: 39px;
+    +portrait()
+      margin-bottom 10px
+      padding-top 12px
+      padding-bottom 10px
+    +mobile()
+      margin-bottom 20px
+      font-size $s26
+  &-chat
+    &-row
+      width 100%
+      display flex
+    &-row.my
+      justify-content flex-end
+      .messenge-bot
+        border-radius: 42px;
+        background-color: rgba(9,0,198,.25)
+        color $white
+        font-weight: 500
+        line-height: 1.5;
+        text-align center
+        font-size 1rem
+        margin-bottom 17px
+        padding-bottom 23px
+        padding-top 23px
+        width 49%
+        +portrait()
+          padding 20px
+          font-size .875rem
+          margin-bottom 10px
+        +mobile()
+          padding 15px
+          width 75%
+  .messenge-bot
+      border-radius: 42px;
+      background rgba(9,0,198,.5)
+      color $white
+      font-weight: 300;
+      line-height: 1.5;
+      padding 23px 45px 25px 41px
+      max-width 49%
+      margin-bottom: 10px;
+      +portrait()
+        padding 20px
+        font-size .875rem
+        margin-bottom 10px
+      +mobile()
+        padding 15px
+        max-width 75%
+  &-variants
+    position absolute
+    bottom 19px
+    right 19px
+    width 44.5%
+    +portrait()
+      bottom 0px
+    +mobile()
+      bottom 0px
+      max-width 100%
+      right 15px
+      left 15px
+      width auto
+    p
+      opacity: 0.39;
+      font-size: $s20
+      font-weight: 300;
+      letter-spacing: 12.5px;
+      text-align: center;
+      color: $black;
+      margin-bottom 25px
+      +portrait()
+        margin-bottom 15px
+      +mobile()
+        margin-bottom 10px
+    &--answer
+      border-radius: 42px;
+      background-color: #0900c6;
+      color $white
+      font-weight: 500
+      line-height: 1.5;
+      text-align center
+      font-size 1rem
+      margin-bottom 17px
+      padding-bottom 23px
+      padding-top 23px
+      cursor pointer
+      transitions()
+      &:hover
+        opacity .7
+      +portrait()
+        padding-top 15px
+        padding-bottom 15px
+        margin-bottom 10px
+      +mobile()
+        padding-top 15px
+        padding-bottom 15px
+        margin-bottom 10px
+
+.messenge-variants-answers
+  display none
+
+.messenge-variants-answers.active
+  display block
+
+.step
+  display none
+
+.step.active
+  display block
+
+
+
+

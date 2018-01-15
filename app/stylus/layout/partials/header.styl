@@ -1,0 +1,72 @@
+@import '../../utilities/vars'
+@import '../../utilities/mixins'
+
+header
+  position relative
+  z-index 10
+  min-height 740px
+  &:after
+    pseudo(block, absolute)
+    background $green
+    top 95px
+    bottom 0
+    left 0
+    right 0
+    z-index 1
+    +tablet()
+      bottom: 97px;
+    +mobile()
+      top 90px
+      bottom 20px
+  +portrait()
+    min-height: 506px;
+  +mobile()
+    min-height: 310px;
+  +landscape()
+    min-height: 467px;
+
+.header-img
+  z-index 40
+  max-width 1042px
+  width 100%
+  position absolute
+  left 15px
+  top -71px
+  +mobile()
+    top -31px
+
+.header-logo
+  max-width 262px
+  width 100%
+  display block
+  position absolute
+  top 0
+  right 15px
+  +tablet()
+    top: -20px;
+  +portrait()
+    max-width 212px
+  +mobile()
+    max-width 60px
+    top -2px
+
+header.header-strategy
+  .heading
+    background $purple2
+    &:after
+      background $purple2
+    h1
+      color $white
+  .header-img
+    top: -103px;
+    max-width 1205px
+    width 100%
+    left -15px
+    +tablet()
+      top: -177px;
+    +portrait()
+      top -173px
+    +mobile()
+      top -67px
+
+

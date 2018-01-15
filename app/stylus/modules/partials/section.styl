@@ -1,0 +1,124 @@
+.heading
+  background $yellow
+  position relative
+  padding 61px 0 23px
+  z-index: 90;
+  +mobile()
+    padding-top 30px
+    padding-bottom 1px
+  &:after
+    pseudo(block, absolute)
+    background $yellow
+    right 0
+    top 0
+    bottom 0
+    width 100vw
+    z-index 2
+
+.tag-line
+  background $yellow
+  padding: 52px 107px 58px 97px;
+  margin-bottom 81px
+  +tablet()
+    padding 42px 60px 48px
+  +portrait()
+    padding 42px 40px 48px
+  +mobile()
+    padding 40px 30px 30px
+  ul
+    display flex
+    flex-direction row
+    justify-content space-between
+    +mobile()
+      flex-wrap: wrap;
+    li
+      font-size: 2.625rem
+      font-weight: 500
+      letter-spacing: 1.7px;
+      color $orange;
+      +portrait()
+        font-size 1.875rem
+      +mobile()
+        font-size 1.125rem
+        flex 1 1 50%
+        max-width 50%
+        margin-bottom 10px
+      +landscape()
+        text-align center
+
+.filter-example
+  background $yellow
+  padding 39px 97px 38px
+  +tablet()
+    padding 39px 60px 38px
+  +portrait()
+    padding 39px 30px 38px
+  +mobile()
+    padding 30px 20px 48px
+  p
+    font-size: $s20
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom $s26
+
+.factor
+  position relative
+  top -26px
+  display flex
+  flex-direction row
+  flex-wrap wrap
+  &-container
+    flex 1 1 33.33333%
+    max-width 33.33333%
+    display flex
+    align-items flex-end
+    margin-bottom 93px
+    +portrait()
+      flex 1 1 50%
+      max-width 50%
+    +mobile()
+      flex 1 1 100%
+      max-width 100%
+    &--image
+      flex 1 1 145px
+      max-width 145px
+      +tablet()
+        flex 1 1 130px
+        max-width 130px
+      +portrait()
+        flex 1 1 100px
+        max-width 100px
+      +mobile()
+        flex 1 1 100px
+        max-width 100px
+    &--text
+      flex 1 1 calc(100% - 145px)
+      max-width calc(100% - 145px)
+      color $white
+      font-size: $s18
+      font-weight: 600
+      line-height: 1.33;
+      margin-bottom 17px
+      padding-right 40px
+      +tablet()
+        flex 1 1 calc(100% - 130px)
+        max-width calc(100% - 130px)
+      +portrait()
+        flex 1 1 calc(100% - 100px)
+        max-width calc(100% - 100px)
+      +mobile()
+        flex 1 1 calc(100% - 100px)
+        max-width calc(100% - 100px)
+
+
+.scenario
+  p
+    margin-bottom 25px
+
+  .par-desc
+    margin-bottom 25px
+    color $yellow3
+
+  h3
+    color $yellow3
+

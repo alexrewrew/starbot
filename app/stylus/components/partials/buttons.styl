@@ -1,0 +1,70 @@
+@import "../../utilities/vars"
+@import "../../utilities/mixins"
+
+button
+  border none
+  cursor pointer
+  transitions()
+  &:focus
+    outline none
+
+.button
+  display block
+  max-width 290px
+  width 100%
+  text-align center
+
+  background $black
+  color $white
+
+  padding-top 11px
+  padding-bottom 12px
+
+  margin-bottom 1rem
+
+  transitions()
+
+.button-big
+  text-align left
+  max-width 458px
+  font-size: $s26
+  font-weight: 600
+  letter-spacing: 1.3px;
+  padding-top 18px
+  padding-bottom 21px
+  padding-left 39px
+  box-shadow: 0px 10px 30px 10px rgba(127,104,0,0.45);
+  margin 21px 0
+  +mobile()
+    padding-left 20px
+    font-size $s18
+    margin-bottom 100px
+  +landscape()
+    max-width 320px
+  svg
+    position relative
+    margin-left: 15px;
+    top: 2px;
+    transitions()
+    +mobile()
+      margin-left 10px
+  &:hover
+    box-shadow: 0px 0px 30px 10px rgba(127,104,0,0.45);
+    background $black
+    color $white
+    svg
+      transform translateX(10px)
+
+.button-pink
+  margin 93px auto
+  font-size: $s32
+  font-weight: 600
+  letter-spacing: 1.6px;
+  max-width 556px
+  padding-top: 24px;
+  padding-bottom: 28px;
+  background $pink
+  box-shadow: 0px 10px 30px 10px rgba(42,0,75,0.45);
+  &:hover
+    background $pink2
+    box-shadow: 0px 0px 30px 10px rgba(42,0,75,0.45);

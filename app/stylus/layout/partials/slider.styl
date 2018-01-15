@@ -1,0 +1,108 @@
+@import '../../utilities/vars'
+@import '../../utilities/mixins'
+
+.slick-loading .slick-list
+  background: #fff url('../img/slick/ajax-loader.gif') center center no-repeat;
+
+@font-face
+  font-family: 'slick';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/slick/slick.eot');
+  src: url('../fonts/slick/slick.eot?#iefix') format('embedded-opentype'), url('../fonts/slick/slick.woff') format('woff'), url('../fonts/slick/slick.ttf') format('truetype'), url('../fonts/slick/slick.svg#slick') format('svg');
+
+
+
+
+.slider
+  position relative
+  padding-bottom: 78px;
+  .arrow
+    position absolute
+    z-index 100
+    top calc(50% - 41px)
+    cursor pointer
+    background $pink
+    width 82px
+    height 82px
+    display flex
+    align-content center
+    justify-content center
+    transitions()
+    img
+      transitions()
+    +mobile()
+      width 41px
+      height 41px
+      img
+        width 25%
+    &:hover
+      background $pink2
+
+
+  .arrow.left
+    left -41px
+    +mobile()
+      left -15px
+    &:hover
+      img
+        transform translateX(-15px)
+  .arrow.right
+    right -41px
+    +mobile()
+      right -15px
+    &:hover
+      img
+        transform translateX(15px)
+
+  .slide
+    display flex
+    justify-content center
+    align-items center
+    height 100%
+    overflow hidden
+    &:focus
+      outline none
+
+  .slider-counter
+    position absolute
+    z-index 100
+    right 0
+    bottom 0
+    font-size 3em
+
+
+  .slick-dots
+    bottom 0
+    left 0
+    right 0
+    position absolute
+    display flex
+    flex-direction row
+    justify-content center
+    li
+      margin 5px
+      button
+        padding 0
+        width 10px
+        height 10px
+        border-radius 50%
+        background $pink
+        opacity .22
+        color $trans
+        transitions()
+        &:hover
+          opacity 1
+    .slick-active
+      button
+        opacity 1
+
+
+.slider-container
+  position relative
+  z-index 30
+  margin: 237px 0 71px;
+  img
+    width 100%
+    +mobile()
+      display none
